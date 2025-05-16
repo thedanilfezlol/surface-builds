@@ -1,0 +1,35 @@
+# Reference: <https://postmarketos.org/devicepkg>
+pkgname=device-microsoft-surface-pro
+pkgdesc="Microsoft Surface Pro"
+pkgver=1
+pkgrel=0
+url="https://postmarketos.org"
+license="MIT"
+arch="x86_64"
+options="!check !archcheck"
+depends="
+		postmarketos-base
+		linux-edge
+		alsa-ucm-conf
+"
+makedepends="devicepkg-dev"
+source="
+		deviceinfo
+		modules-initfs
+"
+install="$pkgname.post-install $pkgname.post-upgrade"
+_pmb_recommends="
+		linux-firmware
+		oem-amd
+		oem-intel
+		oem-nvidia
+"
+
+build() {
+	devicepkg_build $startdir $pkgname
+}
+
+package() {
+	devicepkg_package $startdir $pkgname
+}
+
