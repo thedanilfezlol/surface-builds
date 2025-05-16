@@ -17,14 +17,14 @@ Boot to LiveCD and go to images location
 
 ALL YOUR DRIVE CONTENTS WILL BE ERASED
 
-'wipefs --all /dev/nvme0n1'
+`wipefs --all /dev/nvme0n1`
 
 You need to manually partition your disk. Recommended is 512MB for EFI Partition and all remaining for root
 
 After all done write images to partitions using dd
 
-'dd if=BOOT_IMAGE_LOCATION of=/dev/nvme0n1p1 bs=4096'
+`dd if=BOOT_IMAGE_LOCATION of=/dev/nvme0n1p1 bs=4096`
 
-'dd if=ROOTFS_IMAGE_LOCATION of=/dev/nvme0n1p2 bs=4096'
+`dd if=ROOTFS_IMAGE_LOCATION of=/dev/nvme0n1p2 bs=4096`
 
 Then reboot device and postmarketOS should boot
