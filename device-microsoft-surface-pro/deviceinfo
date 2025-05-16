@@ -18,4 +18,5 @@ deviceinfo_screen_height="1824"
 
 # Boot related
 deviceinfo_flash_method="none"
+generate_systemd_boot="true"
 deviceinfo_boot_filesystem="fat32"

@@ -11,6 +11,7 @@ depends="
 		postmarketos-base
 		linux-edge
 		alsa-ucm-conf
+		systemd-boot
 "
 makedepends="devicepkg-dev"
 source="
